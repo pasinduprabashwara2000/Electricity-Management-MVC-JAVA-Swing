@@ -1,0 +1,28 @@
+package edu.ijse.mvc.swing.dto;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.sql.Date;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+public class MeterDto {
+
+    private String meterId;
+    private MeterType meterType;
+    private Date installion_date;
+    private Status_Type status_type;
+    private String location;
+
+    public enum MeterType{
+        Digital, Analog, Smart
+    }
+
+    public enum Status_Type{
+        Active,Inactive,Faulty
+    }
+
+}
